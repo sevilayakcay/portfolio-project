@@ -1,5 +1,6 @@
 const toggleBtn = document.querySelector(".hamburger");
 const dropDown = document.querySelector(".drop-down");
+const navItems = document.querySelectorAll(".nav-item");
 
 toggleBtn.addEventListener("click", e => {
   e.stopPropagation();
