@@ -13,7 +13,7 @@ window.addEventListener("resize", () => {
     dropDown.classList.remove("active");
   }
 });
-const images = ["images/banner_1.jpg", "images/banner-5.jpg"];
+const images = ["images/banner_1_reponsive.png", "images/banner-5.jpg"];
 
 const bannerDiv = document.querySelector(".banner");
 let currentIndex = 0;
