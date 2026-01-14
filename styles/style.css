@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    color: #7a9185;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 20px rgb(228, 224, 224);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.banner {
+    width: 100vw;
+    /* viewport genişliği */
+    height: 500px;
+    background-image: url("../images/banner_4.png");
+    background-size: cover;
+    background-position: center;
+    /* ortala, sağ yerine */
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-content {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.main-title {
+    max-width: 800px;
+    padding: 20px;
+    font-size: 4rem;
+    color: rgb(128, 125, 122);
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+
+.main-content img {
+    border-radius: 12px;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgb(203, 218, 214);
+}
+
+.main-para {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 900px;
+    /* %100 yerine max-width ile satır uzunluğunu sınırlıyoruz */
+    margin: 20px auto;
+    /* biraz daha nefes alan üst-alt boşluk */
+    padding: 20px 30px;
+    font-size: 1.6rem;
+    /* biraz daha okunabilir boyut */
+    line-height: 1.8;
+    /* satırlar arasına biraz nefes */
+    color: #1b2425;
+    text-align: center;
+    background: linear-gradient(135deg, #e1e9ea, #b9ddd9);
+    /* soft gradient ile daha modern görünüm */
+    border-radius: 15px;
+    /* yuvarlatılmış köşeler */
+    box-shadow: 0 15px 35px rgba(12, 251, 255, 0.15);
+    /* hafif gölge ile öne çıkar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-para:hover {
+    transform: translateY(-5px);
+    /* hover ile hafif yukarı çıkma efekti */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    /* hover sırasında gölge biraz büyür */
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background-color: rgb(173, 183, 178);
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 3px 20px rgb(7, 253, 191);
+}
+
+.nav-bar a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(244, 239, 227);
+    background-color: rgb(163, 153, 151);
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 10px 20px #d8c2cb;
+}
+
+.nav-bar a:hover,
+.nav-items.active {
+    background-color: #7a9185;
+    color: #ffffff;
+    box-shadow: 0 10px 20px #a6eded;
+}
+
+.skills-container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #e1e9ea, #b9ddd9);
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 300px;
+    box-shadow: 0 10px 25px rgba(46, 248, 241, 0.1);
+    transition: all 0.3s ease;
+    gap: 50px;
+}
+
+.skill-card {
+    background-color: hsl(0, 0%, 100%, 0.5);
+    border-radius: 15px;
+    padding: 40px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.skill-card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    z-index: 1;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    box-shadow: 0 8px 20px rgba(53, 244, 209, 0.1);
+}
+
+.skill-card:hover {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 50px #04ffe226;
+}
+
+.skill-card:hover img {
+    border-radius: 90px;
+    transform: scale(1.2);
+    z-index: 3;
+    box-shadow: 0 10px 30px #00ffeab7;
+}
+
+.skill-card h2 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #1b7983;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #2d646e;
+    line-height: 1.4;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.drop-down {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    background-color: #fff;
+    width: 200px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.drop-down.active {
+    display: block;
+    z-index: 999;
+}
+
+.drop-down a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #4d0f0f;
+}
+
+.drop-down a:hover {
+    background-color: #f0f0f0;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(84, 233, 225, 0.619);
+    transition: all 0.3s ease;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(191, 199, 199);
+    height: 200px;
+    width: 100%;
+    font-size: 1rem;
+    gap: 20px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #545454;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.footer a img {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer a img:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 30px rgba(217, 255, 250, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .main-boxes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
