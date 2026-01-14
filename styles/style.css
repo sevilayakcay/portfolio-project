@@ -2,15 +2,17 @@
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1b2425;
 }
 
 .logo {
@@ -20,13 +22,13 @@ body {
 .header {
     position: relative;
     display: flex;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     height: 150px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 1.5rem;
     box-shadow: 0 10px 20px rgb(228, 224, 224);
 }
@@ -38,17 +40,19 @@ body {
     cursor: pointer;
 }
 
+.hamburger:focus-visible {
+    outline: 3px solid #1b7983;
+}
+
 .banner {
     width: 100vw;
     height: 60vh;
-    background-image: url("../images/banner_4_1200x800.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 }
-
 
 .main-content {
     background-color: #f8f8f8;
@@ -63,10 +67,9 @@ body {
     max-width: 800px;
     padding: 20px;
     font-size: 4rem;
-    color: rgb(128, 125, 122);
+    color: #3a3a3a;
     font-family: 'Nothing You Could Do', cursive;
 }
-
 
 .main-content img {
     border-radius: 12px;
@@ -75,8 +78,12 @@ body {
     box-shadow: 0 10px 20px rgb(203, 218, 214);
 }
 
+.main-content img:focus-visible {
+    outline: 3px solid #1b7983;
+}
+
 .main-para {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', sans-serif;
     max-width: 900px;
     margin: 20px auto;
     padding: 20px 30px;
@@ -93,35 +100,38 @@ body {
 .divider {
     border: 0;
     height: 2px;
-    background-color: rgb(173, 183, 178);
+    background-color: #a1a1a1;
     width: 80%;
     margin: 20px auto;
-    box-shadow: 0 3px 20px rgb(7, 253, 191);
 }
 
 .nav-bar a {
     text-decoration: none;
     padding: 10px;
-    color: rgb(244, 239, 227);
-    background-color: rgb(163, 153, 151);
+    color: #ffffff;
+    background-color: #7a9185;
     border-radius: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, sans-serif;
     box-shadow: 0 10px 20px #d8c2cb;
+}
+
+.nav-bar a:focus-visible {
+    outline: 3px solid #1b7983;
 }
 
 .nav-bar .nav-item a:hover,
 .nav-bar .nav-item.active a {
-    background-color: #7a9185;
+    background-color: #1b7983;
     color: #ffffff;
     box-shadow: 0 10px 20px #a6eded;
 }
 
 .skills-container {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     padding: 30px;
     background: linear-gradient(135deg, #e1e9ea, #b9ddd9);
     border-radius: 15px;
@@ -129,19 +139,16 @@ body {
     margin: 0 auto;
     min-height: 300px;
     box-shadow: 0 10px 25px rgba(46, 248, 241, 0.1);
-    transition: all 0.3s ease;
-    gap: 50px;
 }
 
 .skill-card {
-    background-color: hsl(0, 0%, 100%, 0.5);
+    background-color: hsla(0, 0%, 100%, 0.5);
     border-radius: 15px;
     padding: 40px;
     width: 250px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .skill-card img {
@@ -154,7 +161,7 @@ body {
 }
 
 .skill-card:hover {
-    background-color: hsl(0, 0%, 100%);
+    background-color: #ffffff;
     border-radius: 20px;
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 15px 50px #04ffe226;
@@ -169,7 +176,7 @@ body {
 
 .skill-card h2 {
     margin: 10px 0 5px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #1b7983;
 }
 
@@ -199,7 +206,7 @@ body {
 }
 
 .drop-down.active {
-    display: block;
+    display: flex;
     z-index: 999;
 }
 
@@ -210,11 +217,14 @@ body {
     color: #4d0f0f;
 }
 
-.drop-down a:hover {
+.drop-down a:hover,
+.drop-down a:focus-visible {
     background-color: #f0f0f0;
+    outline: none;
 }
 
-.box:hover {
+.box:hover,
+.box:focus-visible {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(84, 233, 225, 0.619);
     transition: all 0.3s ease;
@@ -225,7 +235,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(191, 199, 199);
+    background-color: #bfc7c7;
     height: 200px;
     width: 100%;
     font-size: 1rem;
@@ -238,9 +248,8 @@ body {
     color: #545454;
     text-align: center;
     font-weight: 500;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
 }
-
 
 .footer a img {
     display: flex;
@@ -248,7 +257,8 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer a img:hover {
+.footer a img:hover,
+.footer a img:focus-visible {
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 5px 30px rgba(217, 255, 250, 0.3);
 }

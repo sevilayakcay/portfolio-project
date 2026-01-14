@@ -24,4 +24,4 @@ const slideBanner = () => {
   bannerDiv.style.backgroundImage = `url(${images[currentIndex]})`;
 };
 
-setInterval(slideBanner, 3000);
+setInterval(slideBanner, 2000);
