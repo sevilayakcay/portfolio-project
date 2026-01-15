@@ -1,4 +1,5 @@
-.repo-container {
+.repo-container,
+.repo-container-second {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(163, 184, 184);
     display: flex;
@@ -12,7 +13,8 @@
     gap: 20px;
 }
 
-.repo-card {
+.repo-card,
+.repo {
     background-color: white;
     flex: 1 1 250px;
     min-height: 150px;
@@ -21,19 +23,21 @@
     box-shadow: 0 5px 15px rgba(44, 255, 234, 0.1);
 }
 
+
 .repo-card h3 {
     font-size: 1.2rem;
     margin-bottom: 8px;
 }
 
-.repo-card p {
+.repo-card p .repo p {
     font-size: 1rem;
     color: #142424;
     line-height: 1.5;
     margin-bottom: 12px;
 }
 
-.repo-card a {
+.repo-card a,
+.repo a {
     background-color: #044949;
     border-radius: 3px;
     color: #ffffff;

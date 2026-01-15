@@ -16,20 +16,14 @@ window.addEventListener("resize", () => {
   }
 });
 
-// === GITHUB PROJECTS FETCH SCRIPT ===
-
-// 1️⃣ HTML'deki container'ı DOĞRU şekilde seç
 const repoContainer = document.querySelector("#repo-container");
 const username = "sevilayakcay";
 
-// Container yoksa sessizce çık (sayfa kırılmasın)
 if (!repoContainer) {
   console.error("repo-container bulunamadı");
 } else {
-  // 2️⃣ Portfolyoda göstermek istediğin repo isimleri
   const selectedRepos = ["API-Assignment-group-6", "Responsive-Web-Game", "Portfolio-project", "group5-zooAssignment", "versioncontrol_group_09"];
 
-  // 3️⃣ GitHub API çağrısı
   fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => {
       if (!response.ok) {
@@ -38,7 +32,6 @@ if (!repoContainer) {
       return response.json();
     })
     .then(repos => {
-      // 4️⃣ Sadece seçilen repoları filtrele
       const filteredRepos = repos.filter(repo => selectedRepos.includes(repo.name));
 
       // Eğer eşleşen repo yoksa kullanıcıya mesaj göster
@@ -47,7 +40,6 @@ if (!repoContainer) {
         return;
       }
 
-      // 5️⃣ Repo kartlarını oluştur
       filteredRepos.forEach(repo => {
         const card = document.createElement("div");
         card.className = "repo-card";
