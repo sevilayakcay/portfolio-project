@@ -2,15 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Sevilay Guns</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="styles/contact.css" />
-
+    <link rel="stylesheet" href="./styles/contact.css" />
     <script src="./scripts/script.js" defer></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Nothing+You+Could+Do&family=Rum+Raisin&display=swap" rel="stylesheet" />
@@ -19,9 +15,8 @@
   <body>
     <header class="header">
       <div class="logo">Sevilay Guns</div>
-
       <button class="hamburger">
-        <img src="./images/menu.png" alt="menu" />
+        <img src="./images/menu.png" alt="Menu Icon" />
       </button>
 
       <nav class="nav-bar">
@@ -29,7 +24,7 @@
           <li class="nav-item"><a href="index.html">Home</a></li>
           <li class="nav-item"><a href="aboutme.html">About Me</a></li>
           <li class="nav-item"><a href="projects.html">Projects</a></li>
-          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item active"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -41,26 +36,23 @@
       </div>
     </header>
 
-    <main class="main-content">
-      <div class="banner"></div>
+    <div class="banner fade-in"></div>
 
+    <main class="main-content">
       <h1 class="main-title">Contact</h1>
       <p class="main-para">Have a project in mind? Let’s talk.</p>
 
       <div class="form-container">
         <form action="mailto:sevilayakcay@gmail.com" method="post" enctype="text/plain">
           <div class="form-input">
-            <label for="fname"></label>
             <input type="text" id="fname" name="firstname" placeholder="Your name.." required />
           </div>
 
           <div class="form-input">
-            <label for="lname"></label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name.." required />
           </div>
 
           <div class="form-input">
-            <label for="subject"></label>
             <textarea id="subject" name="subject" placeholder="Please write your message.." required></textarea>
           </div>
 
@@ -75,11 +67,9 @@
       <a href="https://www.linkedin.com/in/sevilay-g-1662282a3/" target="_blank" rel="noopener noreferrer">
         <img src="images/linkedin.png" alt="LinkedIn" width="50" height="50" />
       </a>
-
       <a href="https://github.com/sevilayakcay?tab=repositories" target="_blank" rel="noopener noreferrer">
-        <img src="images/github-png.png" alt="gitHub" width="100" height="50" />
+        <img src="images/github-png.png" alt="GitHub" width="100" height="50" />
       </a>
-
       <p>&copy;2026 Sevilay Guns. All rights reserved.</p>
     </footer>
   </body>

@@ -2,15 +2,17 @@
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1b2425;
 }
 
 .logo {
@@ -20,13 +22,13 @@ body {
 .header {
     position: relative;
     display: flex;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     height: 150px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 1.5rem;
     box-shadow: 0 10px 20px rgb(228, 224, 224);
 }
@@ -38,19 +40,18 @@ body {
     cursor: pointer;
 }
 
-.banner {
-    width: 100vw;
-    /* viewport genişliği */
-    height: 500px;
-    background-image: url("../images/banner_4.png");
-    background-size: cover;
-    background-position: center;
-    /* ortala, sağ yerine */
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
+.hamburger:focus-visible {
+    outline: 3px solid #1b7983;
 }
 
+.banner {
+    width: 100%;
+    height: 60vh;
+    background-image: url("../images/banner-5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .main-content {
     background-color: #f8f8f8;
@@ -65,10 +66,9 @@ body {
     max-width: 800px;
     padding: 20px;
     font-size: 4rem;
-    color: rgb(128, 125, 122);
+    color: #3a3a3a;
     font-family: 'Nothing You Could Do', cursive;
 }
-
 
 .main-content img {
     border-radius: 12px;
@@ -77,80 +77,71 @@ body {
     box-shadow: 0 10px 20px rgb(203, 218, 214);
 }
 
+.main-content img:focus-visible {
+    outline: 3px solid #1b7983;
+}
+
 .main-para {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', sans-serif;
     max-width: 900px;
-    /* %100 yerine max-width ile satır uzunluğunu sınırlıyoruz */
     margin: 20px auto;
-    /* biraz daha nefes alan üst-alt boşluk */
     padding: 20px 30px;
     font-size: 1.6rem;
-    /* biraz daha okunabilir boyut */
     line-height: 1.8;
-    /* satırlar arasına biraz nefes */
     color: #1b2425;
     text-align: center;
     background: linear-gradient(135deg, #e1e9ea, #b9ddd9);
-    /* soft gradient ile daha modern görünüm */
     border-radius: 15px;
-    /* yuvarlatılmış köşeler */
     box-shadow: 0 15px 35px rgba(12, 251, 255, 0.15);
-    /* hafif gölge ile öne çıkar */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.main-para:hover {
-    transform: translateY(-5px);
-    /* hover ile hafif yukarı çıkma efekti */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    /* hover sırasında gölge biraz büyür */
 }
 
 .divider {
     border: 0;
     height: 2px;
-    background-color: rgb(173, 183, 178);
+    background-color: #a1a1a1;
     width: 80%;
     margin: 20px auto;
-    box-shadow: 0 3px 20px rgb(7, 253, 191);
 }
 
 .nav-bar a {
     text-decoration: none;
     padding: 10px;
-    color: rgb(244, 239, 227);
-    background-color: rgb(163, 153, 151);
+    color: #ffffff;
+    background-color: #7a9185;
     border-radius: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, sans-serif;
     box-shadow: 0 10px 20px #d8c2cb;
 }
 
-.nav-bar a:hover,
-.nav-items.active {
-    background-color: #7a9185;
+.nav-bar a:focus-visible {
+    outline: 3px solid #1b7983;
+}
+
+.nav-bar .nav-item a:hover,
+.nav-bar .nav-item.active a {
+    background-color: #1b7983;
     color: #ffffff;
     box-shadow: 0 10px 20px #a6eded;
 }
 
 .skills-container {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     padding: 30px;
-    background: linear-gradient(135deg, #e1e9ea, #b9ddd9);
+    background: linear-gradient(135deg, #82aaaf, #b9ddd9);
     border-radius: 15px;
     max-width: 1200px;
     margin: 0 auto;
     min-height: 300px;
-    box-shadow: 0 10px 25px rgba(46, 248, 241, 0.1);
-    transition: all 0.3s ease;
-    gap: 50px;
+    box-shadow: 0 10px 50px rgba(166, 255, 0, 0.1);
 }
 
 .skill-card {
-    background-color: hsl(0, 0%, 100%, 0.5);
+    background-color: hsla(197, 16%, 91%, 0.5);
     border-radius: 15px;
     padding: 40px;
     width: 250px;
@@ -170,7 +161,7 @@ body {
 }
 
 .skill-card:hover {
-    background-color: hsl(0, 0%, 100%);
+    background-color: #ffffff;
     border-radius: 20px;
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 15px 50px #04ffe226;
@@ -178,20 +169,20 @@ body {
 
 .skill-card:hover img {
     border-radius: 90px;
-    transform: scale(1.2);
-    z-index: 3;
-    box-shadow: 0 10px 30px #00ffeab7;
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 10px 20px #79cdc6b7;
 }
 
 .skill-card h2 {
     margin: 10px 0 5px;
-    font-size: 1.1rem;
-    color: #1b7983;
+    font-size: 1.2rem;
+    color: #08373c;
 }
 
 .skill-card p {
-    font-size: 1rem;
-    color: #2d646e;
+    font-size: 1.2rem;
+    color: #153237;
     line-height: 1.4;
 }
 
@@ -215,7 +206,7 @@ body {
 }
 
 .drop-down.active {
-    display: block;
+    display: flex;
     z-index: 999;
 }
 
@@ -226,11 +217,14 @@ body {
     color: #4d0f0f;
 }
 
-.drop-down a:hover {
+.drop-down a:hover,
+.drop-down a:focus-visible {
     background-color: #f0f0f0;
+    outline: none;
 }
 
-.box:hover {
+.box:hover,
+.box:focus-visible {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(84, 233, 225, 0.619);
     transition: all 0.3s ease;
@@ -241,7 +235,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(191, 199, 199);
+    background-color: #b2c3c3;
     height: 200px;
     width: 100%;
     font-size: 1rem;
@@ -254,9 +248,8 @@ body {
     color: #545454;
     text-align: center;
     font-weight: 500;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
 }
-
 
 .footer a img {
     display: flex;
@@ -264,7 +257,8 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer a img:hover {
+.footer a img:hover,
+.footer a img:focus-visible {
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 5px 30px rgba(217, 255, 250, 0.3);
 }
@@ -295,6 +289,23 @@ body {
         margin: 10px 0;
     }
 
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .main-para {
+        font-size: 1.2rem;
+    }
+
+    .skill-card:hover,
+    .main-para:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .banner {
+        height: 45vh;
+    }
 }
 
 @keyframes fadeInUp {

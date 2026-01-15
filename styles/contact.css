@@ -72,6 +72,7 @@ textarea:focus,
 }
 
 .submit-btn {
+    font-size: 2rem;
     color: aliceblue;
     background-color: rgb(58, 120, 124);
     border: none;

@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Me | Sevilay Guns</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="./scripts/script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -11,20 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Nothing+You+Could+Do&family=Rum+Raisin&display=swap" rel="stylesheet" />
   </head>
+
   <body>
     <header class="header">
       <div class="logo">Sevilay Guns</div>
       <button class="hamburger">
-        <img src="./images/menu.png" />
+        <img src="./images/menu.png" alt="Menu Icon" />
       </button>
+
       <nav class="nav-bar">
         <ul class="nav-links">
           <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="aboutme.html">About Me</a></li>
+          <li class="nav-item active"><a href="aboutme.html">About Me</a></li>
           <li class="nav-item"><a href="projects.html">Projects</a></li>
           <li class="nav-item"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
       <div class="drop-down">
         <a href="index.html">Home</a>
         <a href="aboutme.html">About</a>
@@ -33,15 +36,18 @@
       </div>
     </header>
 
+    <div class="banner fade-in"></div>
+
     <main class="main-content">
-      <div class="banner"></div>
       <h1 class="main-title">About Me</h1>
-      <img class="image-photo" src="images/portfolio_sevilay_guns.png" alt="sevilay-picture" />
+      <img class="image-photo" src="images/portfolio_sevilay_guns.png" alt="Sevilay Guns" />
 
       <p class="main-para">
-        I am a junior front-end developer with a deep passion for programming and visual design. With a Bachelor’s degree in Fine Arts and experience in concept design and illustration, I enjoy creating interfaces where design and code meet.
-        I am currently continuing my education in the Frontend Programming program at Futuregames, where I am further developing my skills in modern web technologies.
+        I am a junior front-end developer with a deep passion for programming and visual design. With a Bachelor’s degree in Fine Arts and experience in concept design and illustration, I enjoy
+        creating interfaces where design and code meet. I am currently continuing my education in the Frontend Programming program at Futuregames, where I am further developing my skills in modern web
+        technologies.
       </p>
+
       <div class="main-boxes-container">
         <div class="box"></div>
         <div class="box"></div>
@@ -51,15 +57,15 @@
         <div class="box"></div>
       </div>
     </main>
+
     <footer class="footer">
-        <footer class="footer">
-          <a href="https://www.linkedin.com/in/sevilay-g-1662282a3/" target="_blank" rel="noopener noreferrer">
-            <img src="images/linkedin.png" alt="LinkedIn" width="50" height="50">
-          </a>
-          <a href="https://github.com/sevilayakcay?tab=repositories" target="_blank" rel="noopener noreferrer">
-            <img src="images/github-png.png" alt="gitHub" width="100" height="50">
-          </a>
-          <p>&copy;2026 Sevilay Guns. All rights reserved.</p>
-        </footer>
+      <a href="https://www.linkedin.com/in/sevilay-g-1662282a3/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.png" alt="LinkedIn" width="50" height="50" />
+      </a>
+      <a href="https://github.com/sevilayakcay?tab=repositories" target="_blank" rel="noopener noreferrer">
+        <img src="images/github-png.png" alt="GitHub" width="100" height="50" />
+      </a>
+      <p>&copy;2026 Sevilay Guns. All rights reserved.</p>
+    </footer>
   </body>
 </html>
