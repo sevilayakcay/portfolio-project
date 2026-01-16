@@ -34,7 +34,6 @@ if (!repoContainer) {
     .then(repos => {
       const filteredRepos = repos.filter(repo => selectedRepos.includes(repo.name));
 
-      // Eğer eşleşen repo yoksa kullanıcıya mesaj göster
       if (filteredRepos.length === 0) {
         repoContainer.innerHTML = "<p>No selected projects found.</p>";
         return;
@@ -46,8 +45,9 @@ if (!repoContainer) {
         card.tabIndex = 0; // accessibility (keyboard focus)
 
         card.innerHTML = `
+          <img src="./images/banner-3-small-vesion.jpg" alt="GitHub repository icon"  class="repo-img"/>
           <h3>${repo.name}</h3>
-          <p>${repo.description || "Check out my repo on GitHub."}</p>
+          <p class="repo-description">${repo.description || "Check out my repo on GitHub."}</p>
           <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
             View on GitHub
           </a>
