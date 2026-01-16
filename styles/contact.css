@@ -16,13 +16,13 @@
 input::placeholder {
     font-family: Verdana, sans-serif;
     font-size: 1.3rem;
-    color: #999;
+    color: #7e7b7b;
 }
 
 textarea::placeholder {
     font-family: Verdana, sans-serif;
     font-size: 1.3rem;
-    color: #999;
+    color: #7e7b7b;
 }
 
 .form-container form {
