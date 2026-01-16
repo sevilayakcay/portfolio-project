@@ -1,6 +1,6 @@
 .repo-container,
 .repo-container-second {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, sans-serif;
     background-color: rgb(163, 184, 184);
     display: flex;
     flex-wrap: wrap;

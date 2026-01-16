@@ -22,7 +22,7 @@ const username = "sevilayakcay";
 if (!repoContainer) {
   console.error("repo-container bulunamadı");
 } else {
-  const selectedRepos = ["API-Assignment-group-6", "Responsive-Web-Game", "Portfolio-project", "group5-zooAssignment", "versioncontrol_group_09"];
+  const selectedRepos = ["API-Assignment-group-6", "Responsive-Web-Game", "Portfolio-project", "group5-zooAssignment", "versioncontrol_group_09", "Portfolio-project-2"];
 
   fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => {
