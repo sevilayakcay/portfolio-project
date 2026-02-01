@@ -22,7 +22,19 @@ const username = "sevilayakcay";
 if (!repoContainer) {
   console.error("repo-container bulunamadı");
 } else {
-  const selectedRepos = ["API-Assignment-group-6", "Responsive-Web-Game", "Portfolio-project", "group5-zooAssignment", "versioncontrol_group_09", "Portfolio-project-2"];
+  const selectedRepos = [
+    "API-Assignment-group-6",
+    "responsive-web-game",
+    "portfolio-project",
+    "group5-zooAssignment",
+    "versioncontrol_group_09",
+    "fahrenheit-to-celsius-sauna-swedish-py",
+    "fahrenheit-to-celsius-sauna-swedish-py",
+    "py-gissa-talet",
+    "python-bingo-game",
+    "py-passenger-tracker",
+    "word-guessing-game-js",
+  ];
 
   fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => {
